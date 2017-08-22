@@ -18,7 +18,7 @@
         });
       },
       gets: function(inArray){
-        if(!inArray){
+        if(Array.isArray(inArray)){
           nx.error('DO NOT SUPPORT GET ALL!')
         }
         return this.base(inArray);
