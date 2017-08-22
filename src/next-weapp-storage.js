@@ -17,11 +17,8 @@
           clear:'clearStorageSync'
         });
       },
-      gets: function(inArray){
-        if(!Array.isArray(inArray)){
-          nx.error('DO NOT SUPPORT GET ALL!')
-        }
-        return this.base(inArray);
+      keys: function(){
+        return wx.getStorageInfoSync().keys;
       }
     }
   });
