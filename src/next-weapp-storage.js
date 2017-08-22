@@ -16,6 +16,12 @@
           remove: 'removeStorageSync',
           clear:'clearStorageSync'
         });
+      },
+      gets: function(inArray){
+        if(!inArray){
+          nx.error('DO NOT SUPPORT GET ALL!')
+        }
+        return this.base(inArray);
       }
     }
   });
