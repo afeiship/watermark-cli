@@ -14,7 +14,8 @@
           set: 'setStorageSync',
           get: 'getStorageSync',
           remove: 'removeStorageSync',
-          clear:'clearStorageSync'
+          clear:'clearStorageSync',
+          stringify: nx.returnValue
         });
       },
       keys: function(){
