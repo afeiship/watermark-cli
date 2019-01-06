@@ -12,9 +12,6 @@
           prefix: inPrefix || ''
         });
       },
-      keys: function() {
-        return wx.getStorageInfoSync().keys;
-      },
       setAccessor: function() {
         this.accessor = {
           set: 'setStorageSync',
@@ -25,6 +22,9 @@
       },
       serialize: function(inTarget) {
         return inTarget;
+      },
+      keys: function() {
+        return wx.getStorageInfoSync().keys;
       }
     }
   });
