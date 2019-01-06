@@ -9,15 +9,27 @@
   "singleQuote": true,
   "overrides": [
     {
-      "files": "*.scss",
+      "files": ["*.json", ".eslintrc", ".tslintrc", ".prettierrc", ".tern-project"],
       "options": {
-        "trailingComma": "none",
-        "tabWidth": 2,
-        "parser": "scss"
+        "parser": "json",
+        "tabWidth": 2
       }
     },
     {
-      "files": "*.json",
+      "files": "*.{css,sass,scss,less}",
+      "options": {
+        "parser": "postcss",
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.ts",
+      "options": {
+        "parser": "typescript"
+      }
+    },
+    {
+      "files": "*.md",
       "options": {
         "trailingComma": "none",
         "tabWidth": 2,

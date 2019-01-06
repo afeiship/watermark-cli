@@ -9,16 +9,22 @@
       init: function(inPrefix) {
         this.base({
           engine: wx,
-          prefix: inPrefix || '',
-          set: 'setStorageSync',
-          get: 'getStorageSync',
-          remove: 'removeStorageSync',
-          clear: 'clearStorageSync',
-          stringify: nx.returnValue
+          prefix: inPrefix || ''
         });
       },
       keys: function() {
         return wx.getStorageInfoSync().keys;
+      },
+      setAccessor: function() {
+        this.accessor = {
+          set: 'setStorageSync',
+          get: 'getStorageSync',
+          remove: 'removeStorageSync',
+          clear: 'clearStorageSync'
+        };
+      },
+      stringify: function(inTarget) {
+        return inTarget;
       }
     }
   });

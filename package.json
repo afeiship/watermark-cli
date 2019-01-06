@@ -18,14 +18,11 @@
     "gulp-concat": "^2.6.0",
     "gulp-load-plugins": "^1.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^2.1.2",
     "yargs": "^4.7.1"
   },
   "dependencies": {
-    "next-abstract-storage": "github:afeiship/next-abstract-storage",
-    "next-is": "github:afeiship/next-is",
-    "next-json": "github:afeiship/next-json"
+    "next-abstract-storage": "github:afeiship/next-abstract-storage"
   }
 }
