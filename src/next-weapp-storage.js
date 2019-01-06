@@ -23,7 +23,7 @@
           clear: 'clearStorageSync'
         };
       },
-      stringify: function(inTarget) {
+      serialize: function(inTarget) {
         return inTarget;
       }
     }
