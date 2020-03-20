@@ -1,8 +1,14 @@
 # next-weapp-storage
 > Storage for weapp based on next.
 
+## installation
+```bash
+npm install -S @feizheng/next-weapp-storage
+```
 
-## resources:
+## usage
+```js
+import NxWeappStorage from '@feizheng/next-weapp-storage';
 
-## todos:
-- [ ] unit test case
+// code goes here:
+```
