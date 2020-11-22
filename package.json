@@ -37,5 +37,13 @@
   },
   "dependencies": {
     "@jswork/next-abstract-storage": "^1.0.0"
-  }
+  },
+  "keywords": [
+    "weapp",
+    "store",
+    "storage",
+    "next",
+    "weixin",
+    "wechat"
+  ]
 }

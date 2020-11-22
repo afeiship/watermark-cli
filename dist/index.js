@@ -3,7 +3,7 @@
  * description: Storage for weapp based on next.
  * homepage: https://github.com/afeiship/next-weapp-storage
  * version: 1.0.0
- * date: 2020-11-22 16:13:37
+ * date: 2020-11-22 16:14:42
  * license: MIT
  */
 
