@@ -1,18 +1,18 @@
 (function() {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@feizheng/next-js-core2');
-  var NxAbstractStorage = nx.AbstractStorage || require('@feizheng/next-abstract-storage');
+  var nx = global.nx || require('@jswork/next');
+  var NxAbstractStorage = nx.AbstractStorage || require('@jswork/next-abstract-storage');
 
   var NxWeappStorage = nx.declare('nx.WeappStorage', {
     extends: NxAbstractStorage,
     methods: {
-      init: function(inPrefix) {
+      init: function (inPrefix) {
         this.base({
           engine: wx,
           prefix: inPrefix || ''
         });
       },
-      setAccessor: function() {
+      setAccessor: function () {
         this.accessor = {
           set: 'setStorageSync',
           get: 'getStorageSync',
@@ -20,10 +20,10 @@
           clear: 'clearStorageSync'
         };
       },
-      serialize: function(inTarget) {
+      serialize: function (inTarget) {
         return inTarget;
       },
-      keys: function() {
+      keys: function () {
         return wx.getStorageInfoSync().keys;
       }
     }
