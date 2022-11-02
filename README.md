@@ -21,13 +21,16 @@ npm i && npm link
 
 ## usage
 ~~~
-Usage: watermark-cli [options]
+Usage: wc [options]
 
 Options:
-  -V, --version       output the version number
-  -d, --debug         only show cmds, but not clean.
-  -s, --src <string>  source filepath. (default: "./src")
-  -h, --help          display help for command
+  -V, --version           output the version number
+  -g, --gravity <string>  Position(north,northeast,center,centre). (default:
+                          "southeast")
+  -c, --cover <string>    Cover url.
+  -d, --dst <string>      Destination URL.
+  -s, --src <string>      Source url (default: "./src")
+  -h, --help              display help for command
 ~~~
 
 ## license

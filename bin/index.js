@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 const { Command } = require('commander');
 const chalk = require('chalk');
+const fs = require('fs');
+const watermark = require('@jswork/watermark').default;
 
 // next packages:
 require('@jswork/next');
@@ -10,13 +12,17 @@ require('@jswork/next-absolute-package');
 
 const { version } = nx.absolutePackage();
 const program = new Command();
-const exec = require('child_process').execSync;
 
 program.version(version);
 
 program
-  .option('-g, --gravity <string>', 'Position(north,northeast,center,centre).', 'southeast')
+  .option(
+    '-g, --gravity <string>',
+    'Position(north,northeast,center,centre).',
+    'southeast'
+  )
   .option('-c, --cover <string>', 'Cover url.')
+  .option('-d, --dst <string>', 'Destination URL.')
   .option('-s, --src <string>', 'Source url', './src')
   .parse(process.argv);
 
@@ -28,10 +34,13 @@ nx.declare({
     }
   },
   methods: {
-    init() { },
     start() {
-      console.log(chalk.green('watermark start...'));
-      console.log(chalk.green('🚗 hello cli.'), program.src, program.gravity, program.cover);
+      const opts = {
+        src: program.src,
+        gravity: program.gravity,
+        cover: program.cover
+      };
+      watermark(opts).then((res) => fs.writeFileSync(program.dst, res));
     }
   }
 });
