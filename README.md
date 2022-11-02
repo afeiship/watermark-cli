@@ -25,8 +25,7 @@ Usage: wc [options]
 
 Options:
   -V, --version           output the version number
-  -g, --gravity <string>  Position(north,northeast,center,centre). (default:
-                          "southeast")
+  -g, --gravity <string>  Position(north,northeast,center,centre). (default: "southeast")
   -c, --cover <string>    Cover url.
   -d, --dst <string>      Destination URL.
   -s, --src <string>      Source url (default: "./src")

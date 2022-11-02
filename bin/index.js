@@ -16,11 +16,7 @@ const program = new Command();
 program.version(version);
 
 program
-  .option(
-    '-g, --gravity <string>',
-    'Position(north,northeast,center,centre).',
-    'southeast'
-  )
+  .option('-g, --gravity <string>', 'Position(north,northeast,center,centre).', 'southeast')
   .option('-c, --cover <string>', 'Cover url.')
   .option('-d, --dst <string>', 'Destination URL.')
   .option('-s, --src <string>', 'Source url', './src')
